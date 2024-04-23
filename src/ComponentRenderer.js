@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 import PlatformDemoLandingPage from "pages/landingpage.js"
 import PlatformDemoPageImageSrc from "images/demo/EventLandingPage.jpeg";
 
-// import UploaderPage from "pages/uploader.js";
+import UploaderPage from "pages/uploader.js";
 import PreviewPage from "pages/preview.js";
 import FolderPage from "pages/folder.js";
 import LoginPage from "pages/login.js";
@@ -36,11 +36,11 @@ export const components = {
       url: `/pages/PreviewPage`,
       imageSrc: ContactUsPageImageSrc,
     },
-    // UploaderPage: {
-    //   component: UploaderPage,
-    //   url: `/pages/UploaderPage`,
-    //   imageSrc: ContactUsPageImageSrc,
-    // },
+    UploaderPage: {
+      component: UploaderPage,
+      url: `/pages/UploaderPage`,
+      imageSrc: ContactUsPageImageSrc,
+    },
 
     LogoutPage: {
       component: LogoutPage,
