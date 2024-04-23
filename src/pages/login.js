@@ -40,11 +40,11 @@ export default () => {
     try {
       //the severless function could be edited or extended to take in specific scopes
       //using session storage is not secure. you will want to change this functionality for production
-      const response = await fetch(`/api/getBoxToken?email=${encodeURIComponent(email)}`);
-      const data = await response.json();
-      setToken(data.accessToken);
-      sessionStorage.setItem('token', data.accessToken);
-      //sessionStorage.setItem('token', encodeURIComponent(password));
+      // const response = await fetch(`/api/getBoxToken?email=${encodeURIComponent(email)}`);
+      // const data = await response.json();
+      // setToken(data.accessToken);
+      // sessionStorage.setItem('token', data.accessToken);
+      sessionStorage.setItem('token', encodeURIComponent(password));
       setLoading(false);
       // Redirect to your main platform page or wherever you use the token
       window.location.href = getConfigValues('globalSettings').landingPage;

@@ -6,7 +6,7 @@ import PrivateRoute from "PrivateRoute";
 
 import FolderPage from './pages/folder'
 import PreviewPage from './pages/preview'
-import UploadPage from './pages/uploader'
+//import UploadPage from './pages/uploader'
 import LandingPage from './pages/landingpage'
 import LoginPage from "pages/login";
 import LogoutPage from "pages/logout";
@@ -55,9 +55,9 @@ export default function App() {
           <PrivateRoute path="/PreviewPage" >
               {shouldLogin?<LoginPage/>:<PreviewPage/>}
           </PrivateRoute> 
-          <PrivateRoute path="/UploaderPage" >
+          {/* <PrivateRoute path="/UploaderPage" >
               {shouldLogin?<LoginPage/>:<UploadPage/>}
-          </PrivateRoute>
+          </PrivateRoute>  */}
           <PrivateRoute path="/FolderPage" >
               {shouldLogin?<LoginPage/>:<FolderPage/>}
           </PrivateRoute> 
