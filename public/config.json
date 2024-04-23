@@ -1,0 +1,40 @@
+{
+
+  "globalSettings": {
+    "landingPage":"/index"
+  },
+  "mainpageSettings": {
+    "heading":"Accelerate your finances with Increo Financial",
+    "description":  "Save more money by using one of our expert advisors. They know the tricks so you don't have to.",
+    "imageSrc":  "https:/pchristensenb.github.io/template2.0/img/custom/sidebar-image.jpeg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+    "primaryButtonUrl":  "https://box.dev",
+    "primaryButtonText":  "Get Started today",
+    "features":  ["Retirement planning", "Full stock market trading services", "Same day wires"],
+    "testimonial":  {
+      "quote": "With Increo Financial, we have been able to triple our monetary returns allowing us to invest more in our growth and employees.",
+      "customerName": "Aaron Levie",
+      "customerCompany": "Box Inc."
+   }
+  },
+
+  "loginSettings": {
+    "signInMessage":"Sign in to Increo Financial",
+    "logoLinkURL":"",
+    "signInButtonText":"Sign In"
+  },
+  
+  
+
+  "navigation": [
+  
+    {
+      "page": "FolderPage",
+      "title": "My Statements"
+    },
+    {
+      "page": "PreviewPage",
+      "title": "Terms & Conditions"
+    }
+   
+  ]
+}

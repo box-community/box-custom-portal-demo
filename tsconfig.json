@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*", "src/*"]
+    },
+    "allowJs": true,        // Allow JavaScript files to be compiled.
+    "checkJs": false,       // Disable type checking of JavaScript files.
+    "noEmit": true,         // Do not emit output (like .js files or .d.ts files).
+    "isolatedModules": true, // Ensures each file can be transpiled independently
+    "skipLibCheck": true,   // Skip type checking of all declaration files (*.d.ts).
+    "esModuleInterop": true, // Enables compilation of ES6 modules.
+    "target": "esnext",      // Set script target to latest ECMAScript version.
+    "module": "commonjs"     // Use commonjs module system, as used in Node.js.
+  },
+  "include": [
+    "src", 
+    "src/components/platform/config.js", 
+    "src/misc"
+  ],
+  "exclude": [
+    "node_modules", // Exclude node_modules to speed up compilation.
+    "**/*.spec.ts"
+  ]
+}
