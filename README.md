@@ -57,6 +57,8 @@ Deploy directly to Vercel using the following button, which will prompt for nece
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbox-community%2Fbox-custom-portal-demo&env=REACT_APP_BOX_CONTENT_UPLOADER_FOLDER_ID,REACT_APP_BOX_UPLOADER_FOLDER_ID,REACT_APP_BOX_PREVIEW_FILE_ID,BOX_CLIENT_ID,BOX_CLIENT_SECRET,BOX_PUBLIC_KEY_ID,BOX_PASSPHRASE,BOX_ENTERPRISE_ID,BOX_PRIVATE_KEY&project-name=box-portal-demo&repository-name=box-portal-demo&build-command=pnpm%20run%20build&install-command=pnpm%20install)
 
+When deploying to Vercel, it will automatically use Node 20.X. You will need to switch this in the settings of the project to 18.X and redeploy. After the initial one fails, go to your project (top left button on the screen) > settings > general - scroll down and select 18.X > click Save. Then, go to the deployments tab, click the ellipsis to the right of the failed deployments, and click redeploy.
+
 ### Post-Deployment Configuration
 
 - Add the Vercel domain to the CORS configuration for your Box application.
