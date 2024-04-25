@@ -61,7 +61,7 @@ When deploying to Vercel, it will automatically use Node 20.X. You will need to 
 
 ### Post-Deployment Configuration
 
-- Add the Vercel domain to the CORS configuration for your Box application.
+- Add the Vercel domain to the CORS configuration for your Box application. You may need to add more than one url as there is also a deployment url. Don't add the final backslash. Ex https://box-ccs-wealth-mgmt-portal-demo.vercel.app, https://demo-1-erfpodp84-smartoneinoks-projects.vercel.app
 
 ### Testing the Deployed Site
 
@@ -112,6 +112,8 @@ cp .env_example .env
 ```
 
 Run the project locally using Vercel CLI
+
+Don't forget to add http://localhost:3000 to the cors config in the developer console!
 
 ```bash
 vercel dev
