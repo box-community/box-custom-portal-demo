@@ -34,6 +34,9 @@ export default () => {
 
             <ContentPreview 
                 hasHeader='true'
+                // contentAnswersProps={{
+                //   show: true,
+                // }}
                 logoUrl= {logoURL}
                 token={token}
                 fileId={folderID}

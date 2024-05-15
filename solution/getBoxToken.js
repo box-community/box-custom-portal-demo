@@ -36,6 +36,7 @@ async function getUserAccessToken(client, userId) {
     try {
         const userClient = sdk.getAppAuthClient('user', userId);
         const tokenInfo = await userClient.exchangeToken(['base_explorer','item_preview', 'item_download', 'item_rename', 'item_upload']);
+        // const tokenInfo = await userClient.exchangeToken(['base_explorer','item_preview', 'item_download', 'item_rename', 'item_upload', 'ai.readwrite']);
         return tokenInfo.accessToken;
     } catch (error) {
         console.error('Failed to get user access token:', error);

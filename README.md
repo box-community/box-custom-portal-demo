@@ -34,10 +34,11 @@ Using Vercel, the project deploys serverless functions from the `/api` folder, w
 ### Configuring Your Box Application
 
 1. **Create a Box Developer Account**: Sign up at [Box Developers](https://account.box.com/signup/n/developer) or use a pre-existing Box Enterprise account. Do not deploy to production!
-2. **Create a New Application**: Go to the [Box Developer Console](https://app.box.com/developers/console), click 'Create New App', choose 'Custom App', then 'Server Authentication with JWT'. Name your app.
-3. **Set Application Scopes**: Ensure the application is configured with the necessary permissions: App + Enterprise, read/write all files, manage users/groups/enterprise properties, and generate user access tokens.
-4. **Generate a Public/Private Keypair**: Click the button to generate a public/private keypair.
+2. **Create a New Application**: Go to the [Box Developer Console](https://app.box.com/developers/console), click 'Create New App', choose 'Custom App', name your app, then 'Server Authentication with JWT'.
+3. **Set Application Scopes**: Ensure the application is configured with the necessary permissions: App + Enterprise, read/write all files, manage users/groups/enterprise properties, Box AI, and generate user access tokens.
+4. **Generate a Public/Private Keypair**: Click the button to generate a public/private keypair. Note this will require 2FA. You will have to set this up if you have done so before. 
 5. **Download the JSON Config File**: This file is automatically downloaded upon keypair generation.
+6. **Save**: Save the changes using the button in the top right.
 
 ### Authorizing Your Box Application
 
@@ -53,13 +54,15 @@ Follow the steps outlined at [Custom App Approval](https://developer.box.com/gui
 
 ### Deploying with Vercel
 
+NOTE - It is advised to have already created your Vercel account and have it open in a tab. Deploying to Vercel without having an account already or a tab open, could cause some confusion. The first time you deploy something from GitHub, it will ask you to connect github and Vercel. 
+
 Deploy directly to Vercel using the following button, which will prompt for necessary environment variables and configurations:
 
 [![Deploy to Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbox-community%2Fbox-custom-portal-demo&env=REACT_APP_BOX_CONTENT_UPLOADER_FOLDER_ID,REACT_APP_BOX_UPLOADER_FOLDER_ID,REACT_APP_BOX_PREVIEW_FILE_ID,BOX_CLIENT_ID,BOX_CLIENT_SECRET,BOX_PUBLIC_KEY_ID,BOX_PASSPHRASE,BOX_ENTERPRISE_ID,BOX_PRIVATE_KEY&project-name=box-portal-demo&repository-name=box-portal-demo&build-command=pnpm%20run%20build&install-command=pnpm%20install)
 
 ### Post-Deployment Configuration
 
-- Add the Vercel domain to the CORS configuration for your Box application.
+- Add the Vercel domain to the CORS configuration for your Box application. This is located in the Developer Console in the configuration tab.
 
 ### Testing the Deployed Site
 
@@ -103,7 +106,7 @@ Install project dependencies
 pnpm install
 ```
 
-Copy env file and add information for each variable based on the json config file and content ids
+Copy env file and add information for each variable based on the json config file and content ids. No quotes required.
 
 ```bash
 cp .env_example .env
@@ -115,9 +118,9 @@ Run the project locally using Vercel CLI
 vercel dev
 ```
 
-Make changes to the portal.
+Make changes to the portal. There are a couple of files to use as examples in the solution folder. There are also some comments in various places in the code you can use to utilize the solution files. You can upload a new logo in src/images/platform/logo.png, public/favicon.ico, public/logo192.png and public/logo512.png. You can utilize several online options to download all four files in one. If you add new pages or want to change the default text, you can find that in the public/config.json file.
 
-Push changes to GitHub and auto-deploy via Vercel
+Push changes to GitHub and auto-deploy via Vercel.
 
 ```bash
 git add .
