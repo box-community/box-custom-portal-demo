@@ -102,7 +102,11 @@ npm install -g pnpm
 npm install -g vercel
 ```
 
-Install project dependencies
+Install project dependencies with pnpm. For more info about pnpm go to: https://pnpm.io/
+
+```bash
+npm install -g pnpm
+```
 
 ```bash
 pnpm install
@@ -114,12 +118,33 @@ Copy env file and add information for each variable based on the json config fil
 cp .env_example .env
 ```
 
-Run the project locally using Vercel CLI
+Run the project locally using Vercel CLI.
 
-Don't forget to add http://localhost:3000 to the cors config in the developer console!
+```bash
+npm i -g vercel
+```
+
+Don't forget to add http://localhost:3000 to the CORS config in the Box Developer Console in Confriguration settings!
 
 ```bash
 vercel dev
+```
+
+On first attempt Vercel will ask you to log in. Choose an authentication method, for example with GitHub.
+Vercel CLI will ask you several questions related to setup:
+``` bash
+? Set up and develop “~/projects/box-custom-portal-demo”? (Y/n) y
+
+? Which scope should contain your project? (Use arrow keys)
+❯ github-user's projects
+```
+
+You can fork the original project in Github and choose the fokred version as the existing one.
+
+```bash
+? Link to existing project? (Y/n) yes
+
+? What’s the name of your existing project? box-portal-demo-fork
 ```
 
 Make changes to the portal. There are a couple of files to use as examples in the solution folder. There are also some comments in various places in the code you can use to utilize the solution files. You can upload a new logo in src/images/platform/logo.png, public/favicon.ico, public/logo192.png and public/logo512.png. You can utilize several online options to download all four files in one. If you add new pages or want to change the default text, you can find that in the public/config.json file.
