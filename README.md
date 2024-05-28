@@ -118,7 +118,9 @@ Copy env file and add information for each variable based on the json config fil
 cp .env_example .env
 ```
 
-Run the project locally using Vercel CLI.
+Fill the .env file with appropriate values.
+
+Run the project locally using Vercel CLI. If you're using Vercel for the first time, install it locally:
 
 ```bash
 npm i -g vercel
