@@ -95,13 +95,6 @@ nvm install 18.18.0
 nvm use 18.18.0
 ```
 
-Install pnpm and Vercel CLI globally
-
-```bash
-npm install -g pnpm
-npm install -g vercel
-```
-
 Install project dependencies with pnpm. For more info about pnpm go to: https://pnpm.io/
 
 ```bash
